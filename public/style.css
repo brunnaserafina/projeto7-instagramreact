@@ -311,6 +311,10 @@ body {
   display: none !important;
 }
 
+strong {
+  font-weight: bold;
+}
+
 @media (max-width: 935px) {
   .sidebar {
     display: none;

@@ -1,10 +1,15 @@
-import Feed from './Feed';
+import Stories from './Stories';
+import Posts from './Posts';
 import Sidebar from './Sidebar';
 
 function Corpo() {
     return (
         <div class="corpo">
-            <Feed/>
+            <div class="feed">
+                <Stories />
+                <Posts />
+            </div>
+            
             <Sidebar />
         </div>
     );

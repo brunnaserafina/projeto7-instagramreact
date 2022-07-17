@@ -28,23 +28,22 @@ function Sugestoes() {
                 Sugestões para você
                 <div>Ver tudo</div>
             </div>
-            <Sugestao />
-            <Sugestao />
-            <Sugestao />
-            <Sugestao />
-            <Sugestao />
-            <Sugestao />
+            <Sugestao imagem="./assets/img/bad.vibes.memes.svg" nome="bad.vibes.memes"/>
+            <Sugestao imagem="./assets/img/chibirdart.svg" nome="chibirdart"/>
+            <Sugestao imagem="./assets/img/razoesparaacreditar.svg" nome="razoesparaacreditar"/>
+            <Sugestao imagem="./assets/img/adorable_animals.svg" nome="adorable_animals"/>
+            <Sugestao imagem="./assets/img/smallcutecats.svg" nome="smallcutecats"/>
         </div>
     );
 }
 
-function Sugestao() {
+function Sugestao(props) {
     return (
         <div class="sugestao">
             <div class="usuario">
-                <img src="assets/img/bad.vibes.memes.svg" />
+                <img src={props.imagem} />
                 <div class="texto">
-                    <div class="nome">bad.vibes.memes</div>
+                    <div class="nome">{props.nome}</div>
                     <div class="razao">Segue você</div>
                 </div>
             </div>

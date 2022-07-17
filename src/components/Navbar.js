@@ -7,6 +7,7 @@ function Navbar() {
                 <InstagramMobile />
                 <Pesquisa />
                 <Icones />
+                <IconesMobile />
             </div>
         </div>
 

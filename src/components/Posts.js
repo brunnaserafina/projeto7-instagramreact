@@ -1,3 +1,5 @@
+import React from "react";
+
 const postagem = [
     { imagem: "./assets/img/meowed.svg", usuario: "meowed", foto: "./assets/img/gato-telefone.svg", curtida: "./assets/img/respondeai.svg", nome: "respondeai", quant: "101.523" },
     { imagem: "./assets/img/barked.svg", usuario: "barked", foto: "./assets/img/dog.svg", curtida: "./assets/img/adorable_animals.svg", nome: "adorable_animals", quant: "99.159" }
@@ -14,8 +16,14 @@ function Posts() {
 }
 
 function Post(props) {
-    function curtirPostagem() {
-        console.log('Clicou');
+    const [corLike, setCorLike] = React.useState("heart-outline");
+
+    function mudarCor() {
+        if (corLike === "heart-outline") {
+            setCorLike("heart");
+        } else {
+            setCorLike("heart-outline");
+        }
     }
 
     return (
@@ -31,13 +39,13 @@ function Post(props) {
             </div>
             
             <div class="conteudo">
-                <img src={props.foto} onClick={() => {curtirPostagem()}}/>
+                <img src={props.foto} onClick={() => setCorLike("heart")}/>
             </div>
 
             <div class="fundo">
                 <div class="acoes">
                     <div>
-                        <ion-icon name="heart-outline"></ion-icon>
+                        <ion-icon name={corLike} onClick={mudarCor}></ion-icon>
                         <ion-icon name="chatbubble-outline"></ion-icon>
                         <ion-icon name="paper-plane-outline"></ion-icon>
                     </div>

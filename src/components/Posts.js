@@ -7,9 +7,9 @@ const postagem = [
 
 function Posts() {
     return (
-        <div class="posts">
-            {postagem.map((post) => (
-                <Post imagem={post.imagem} usuario={post.usuario} foto={post.foto} curtida={post.curtida} nome={post.nome} quantidade={post.quant} />
+        <div className="posts">
+            {postagem.map((post, index) => (
+                <Post key={index} imagem={post.imagem} usuario={post.usuario} foto={post.foto} curtida={post.curtida} nome={post.nome} quantidade={post.quant} />
             ))}
         </div>
     );
@@ -27,23 +27,23 @@ function Post(props) {
     }
 
     return (
-        <div class="post">
-            <div class="topo">
-                <div class="usuario">
+        <div className="post">
+            <div className="topo">
+                <div className="usuario">
                     <img src={props.imagem} />
                     {props.usuario}
                 </div>
-                <div class="acoes">
+                <div className="acoes">
                     <ion-icon name="ellipsis-horizontal"></ion-icon>
                 </div>
             </div>
             
-            <div class="conteudo">
+            <div className="conteudo">
                 <img src={props.foto} onClick={() => setCorLike("heart")}/>
             </div>
 
-            <div class="fundo">
-                <div class="acoes">
+            <div className="fundo">
+                <div className="acoes">
                     <div>
                         <ion-icon name={corLike} onClick={mudarCor}></ion-icon>
                         <ion-icon name="chatbubble-outline"></ion-icon>
@@ -54,9 +54,9 @@ function Post(props) {
                     </div>
                 </div>
 
-                <div class="curtidas">
+                <div className="curtidas">
                     <img src={props.curtida} />
-                    <div class="texto">
+                    <div className="texto">
                         Curtido por <strong>{props.nome}</strong> e
                         <strong> outras {props.quantidade} pessoas</strong>
                     </div>

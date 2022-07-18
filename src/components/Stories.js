@@ -11,9 +11,9 @@ const stories = [
 
 function Stories() {
     return (
-        <div class="stories">
-            {stories.map((story) => (
-               <Story imagem={story.imagem} usuario={story.usuario}/>
+        <div className="stories">
+            {stories.map((story, index) => (
+               <Story key={index} imagem={story.imagem} usuario={story.usuario}/>
             ))}
             <Setinha />
         </div>
@@ -22,11 +22,11 @@ function Stories() {
 
 function Story(props) {
     return (
-        <div class="story">
-            <div class="imagem">
+        <div className="story">
+            <div className="imagem">
                 <img src={props.imagem} />
             </div>
-            <div class="usuario">
+            <div className="usuario">
                 {props.usuario}
             </div>
         </div>
@@ -35,7 +35,7 @@ function Story(props) {
 
 function Setinha() {
     return (
-        <div class="setinha">
+        <div className="setinha">
             <ion-icon name="chevron-forward-circle"></ion-icon>
         </div>
     );

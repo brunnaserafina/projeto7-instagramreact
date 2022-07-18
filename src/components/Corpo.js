@@ -4,8 +4,8 @@ import Sidebar from './Sidebar';
 
 function Corpo() {
     return (
-        <div class="corpo">
-            <div class="feed">
+        <div className="corpo">
+            <div className="feed">
                 <Stories />
                 <Posts />
             </div>

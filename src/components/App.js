@@ -1,13 +1,13 @@
 import Navbar from './Navbar';
 import Corpo from './Corpo';
-import FundoMobile from './FundoMobile';
+import Mobile from './Mobile';
 
 function App() {
     return (
         <div>
             <Navbar />
             <Corpo />
-            <FundoMobile />
+            <Mobile />
         </div>
     );
 }

@@ -1,3 +1,11 @@
+const sugestoes= [
+    {imagem:"./assets/img/bad.vibes.memes.svg", nome:"bad.vibes.memes"},
+    {imagem:"./assets/img/chibirdart.svg", nome:"chibirdart"},
+    {imagem:"./assets/img/razoesparaacreditar.svg", nome:"razoesparaacreditar"},
+    {imagem:"./assets/img/adorable_animals.svg", nome:"adorable_animal"},
+    {imagem:"./assets/img/smallcutecats.svg", nome:"smallcutecats"}
+];
+
 function Sidebar() {
     return (
         <div class="sidebar">
@@ -28,11 +36,9 @@ function Sugestoes() {
                 Sugestões para você
                 <div>Ver tudo</div>
             </div>
-            <Sugestao imagem="./assets/img/bad.vibes.memes.svg" nome="bad.vibes.memes"/>
-            <Sugestao imagem="./assets/img/chibirdart.svg" nome="chibirdart"/>
-            <Sugestao imagem="./assets/img/razoesparaacreditar.svg" nome="razoesparaacreditar"/>
-            <Sugestao imagem="./assets/img/adorable_animals.svg" nome="adorable_animals"/>
-            <Sugestao imagem="./assets/img/smallcutecats.svg" nome="smallcutecats"/>
+            {sugestoes.map((sugestao) => (
+                <Sugestao imagem={sugestao.imagem} nome={sugestao.nome}/>
+            ))}
         </div>
     );
 }

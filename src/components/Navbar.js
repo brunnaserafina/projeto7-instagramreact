@@ -10,7 +10,6 @@ function Navbar() {
                 <IconesMobile />
             </div>
         </div>
-
     );
 }
 

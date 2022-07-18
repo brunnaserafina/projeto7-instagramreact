@@ -1,4 +1,4 @@
-function FundoMobile() {
+function Mobile() {
     return (
         <div class="fundo-mobile">
         <ion-icon name="home"></ion-icon>
@@ -10,4 +10,4 @@ function FundoMobile() {
     );
 }
 
-export default FundoMobile;
+export default Mobile;

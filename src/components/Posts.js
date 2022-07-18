@@ -14,6 +14,10 @@ function Posts() {
 }
 
 function Post(props) {
+    function curtirPostagem() {
+        console.log('Clicou');
+    }
+
     return (
         <div class="post">
             <div class="topo">
@@ -27,7 +31,7 @@ function Post(props) {
             </div>
             
             <div class="conteudo">
-                <img src={props.foto} />
+                <img src={props.foto} onClick={() => {curtirPostagem()}}/>
             </div>
 
             <div class="fundo">

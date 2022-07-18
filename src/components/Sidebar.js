@@ -1,7 +1,7 @@
 function Sidebar() {
     return (
         <div class="sidebar">
-            <Usuario />
+            <Usuario username="catanacomics" name="Catana"/>
             <Sugestoes />
             <Links />
             <Copyright />
@@ -9,13 +9,13 @@ function Sidebar() {
     );
 }
 
-function Usuario() {
+function Usuario(props) {
     return (
         <div class="usuario">
             <img src="assets/img/catanacomics.svg" />
             <div class="texto">
-                <strong>catanacomics</strong>
-                Catana
+                <strong>{props.username}</strong>
+                {props.name}
             </div>
         </div>
     );
